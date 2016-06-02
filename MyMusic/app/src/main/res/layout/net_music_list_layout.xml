@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- 真是欲哭无泪啊，布局没弄好，代码一直报空指针异常 -->
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/ll_search_btn_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search_bg"
+        android:orientation="vertical"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/tv_search_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableLeft="@drawable/search_drawable_left"
+            android:text="搜索"
+            android:textColor="#FF666666"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_search_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search_bg"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:hint="搜索"
+            android:textCursorDrawable="@null"
+            android:background="@null"
+            android:padding="5dp"
+            android:textSize="15sp" />
+
+        <ImageButton
+            android:id="@+id/ib_search_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/search_drawable_left" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_load"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_search_btn_container"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:id="@+id/pb_wait"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="正在努力搜索中"
+            android:textColor="#8b8a8a"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_net_music"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_search_btn_container"
+        android:cacheColorHint="@android:color/transparent"
+        android:listSelector="@android:color/transparent"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:visibility="gone" >
+    </ListView>
+    </LinearLayout>
+
+</RelativeLayout>

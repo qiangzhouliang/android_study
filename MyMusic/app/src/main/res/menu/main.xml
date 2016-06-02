@@ -1,0 +1,30 @@
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_ilike"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="我喜欢"
+        tools:ignore="AppCompatResource" />
+    <item
+        android:id="@+id/action_record"
+        android:orderInCategory="200"
+        android:showAsAction="always"
+        android:title="最近播放"
+        tools:ignore="AppCompatResource" />
+
+    <item
+        android:id="@+id/action_about"
+        android:orderInCategory="300"
+        android:title="关于" />
+    <item
+        android:id="@+id/action_help"
+        android:orderInCategory="400"
+        android:title="帮助" />
+    <item
+        android:id="@+id/action_exit"
+        android:orderInCategory="400"
+        android:title="退出" />
+
+</menu>
